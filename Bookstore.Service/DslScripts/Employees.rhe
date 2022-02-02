@@ -2,25 +2,30 @@ Module Bookstore{
     
     Entity Employee{
 
-        ShortString Name;
+        Integer IdentificationNumber;
+        ShortString LastName { Required; }
+        ShortString FirstName { Required; }
+
+        ShortString Code { RegExMatch "\d{7,10}" "Code must have 7 to 10 digits."; }
+        DateTime WorkStarted { Required; }
+        DateTime WorkFinished;
+        Integer TestPeriod { MinValue 1; MaxValue 12; }
+        ShortString Iban { Required; Unique; MinLength 21; MaxLength 21; }
+
+        UniqueMultiple 'LastName FirstName';
+
+        ItemFilter FinishBeforeStart 'employee => employee.WorkFinished != null && employee.WorkFinished.Value < employee.WorkStarted.Value';
+        InvalidData FinishBeforeStart 'It is not allowed to enter a WorkFinished time before the WorkStarted time.';
+
         ShortString VAT { Unique; }
     }
 
     Entity Manager{
         Extends Bookstore.Employee;
+        LongString BonusInformation;
 
     }
 
-    Entity BonusInformation{
-        Reference Manager { Detail; }
-        Reference Bonus { Detail; }
-        LongString Description;
-    }
-
-    Entity Bonus{
-        UniqueReference Employee { Detail; }
-        Money Amount;
-    }
 
     Entity Education{
         Reference Employee { Detail; }

@@ -6,18 +6,21 @@
         ShortString Title;
         Integer NumberOfPages;
         Reference Author Bookstore.Person;
+        DateTime InStoreFrom { CreationTime; }
+
+        DateTime AuthorModified {ModificationTimeOf Bookstore.Book.Author;}
 
         ItemFilter CommonMisspelling 'book => book.Title.Contains("curiousity")';
         InvalidData CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
 
-        Logging;
+        Logging { AllProperties; }
     }
 
     Entity ChildrensBook{
         Extends Bookstore.Book;
 
-        Integer AgeFrom;
-        Integer AgeTo;
+        Integer AgeFrom { DefaultValue 'item => 0'; }
+        Integer AgeTo { DefaultValue 'item => 12'; }
         IntegerRange AgeFrom AgeTo;
     }
 
@@ -26,18 +29,25 @@
 
         ShortString OriginalLanguage;
         Reference Translator Bookstore.Person;
+
+        ItemFilter OriginalLanguageExists 'item => item.OriginalLanguage != null';
+        Lock OriginalLanguageExists 'Original language cannot be changed';
     }
 
     Entity Person{
         ShortString Name;
+        Logging;
     }
 
     Entity Comment{
         Reference Book {Detail;}
         LongString Text;
+        
+        Deactivatable;
     }
 
     Entity Topic{
+        DenyUserEdit;
         ShortString Name;
     }
 
@@ -46,6 +56,81 @@
         Reference Topic {Required;}
 
         UniqueMultiple 'Book Topic';
+    }
+    SqlQueryable BookInfo
+        "
+            SELECT
+                topicList.BookID,
+                NumberOfTopics = COUNT(topicList.ID)
+            FROM
+                Bookstore.BookTopic topicList
+            GROUP BY
+                topicList.BookID
+        "
+    {
+    Extends Bookstore.Book;
+    Integer NumberOfTopics;
+
+    AutodetectSqlDependencies;
+    }
+
+     Browse BookGrid Bookstore.Book
+    {
+        Take Title;
+        Take 'Author.Name';
+        Take NumberOfTopics 'Extension_BookInfo.NumberOfTopics';
+    } 
+
+    Action InsertManyBooks
+    '(parameter, repository, userInfo) =>
+    {
+        for (int i = 0; i < parameter.NumberOfBooks; i++)
+        {
+            string newTitle = parameter.TitlePrefix + " - " + (i + 1);
+            var newBook = new Bookstore.Book { Code = "+++", Title = newTitle };
+            repository.Bookstore.Book.Insert(newBook);
+        }
+    }'
+{
+    Integer NumberOfBooks;
+    ShortString TitlePrefix;
+}
+
+    
+  Action Insert5Books
+         '(parameter, repository, userInfo) =>
+    {
+        for (int i = 0; i < 5; i++)
+         {
+             var newBook = new Bookstore.Book { Code = "+++", Title = "New book" };
+             repository.Bookstore.Book.Insert(newBook);
+        }
+    }';
+
+    Browse BookGrid_EDU Bookstore.Book
+    {
+        Take Code;
+        Take Title;
+        Take 'Author.Name';
+        Take TranslatorName 'Extension_ForeignBook.Translator.Name';
+    }   
+
+    SqlQueryable BookInfo_EDU
+        "
+            SELECT
+                b.ID,
+                NumberOfComments = COUNT(c.ID)
+            FROM
+                Bookstore.Book b
+                LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID
+            GROUP BY
+                b.ID
+        "
+    {
+        Extends Bookstore.Book;
+        Integer NumberOfComments;
+
+        AutodetectSqlDependencies;
     }
 
 }

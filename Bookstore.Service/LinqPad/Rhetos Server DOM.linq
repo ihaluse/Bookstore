@@ -61,18 +61,28 @@ void Main()
     {
         var context = scope.Resolve<Common.ExecutionContext>();
         var repository = context.Repository;
+		
+		//BOOK TITLE + NAME OF AUTHOR
+		var allAuthors = repository.Bookstore.Person.Load();
 
-	var allBooks = repository.Bookstore.Book.Load();
-	allBooks.Dump();
-	
-	var justTitles = allBooks.Select(n => n.Title);
-	justTitles.Dump();
-	
-	var allAuthors = repository.Bookstore.Person.Load();
-	allAuthors.Dump();
-		
-		
-		
+		var allBooks = repository.Bookstore.Book.Load().Join(allAuthors, book => book.AuthorID, author => author.ID,
+		(book, author) => new {book.Title, author.Name});
+		//allBooks.Dump();
 
-    }
+		//NUMBER OF TOPICS + NAME OF AUTHOR
+		var numberOfTopicsAndAuthor = repository.Bookstore.Book.Query().Select(n => new { n.Author.Name, n.Extension_BookInfo.NumberOfTopics });
+		//numberOfTopicsAndAuthor.Dump();
+
+		//SQL QUERY FOR UPPER LINQ
+		numberOfTopicsAndAuthor.ToString().Dump("Generated SQL (numberOfTopicsAndAuthor)");
+
+		//INSERT MANY BOOKS
+		var actionParameter = new Bookstore.InsertManyBooks
+		{
+			NumberOfBooks = 2,
+			TitlePrefix = "New Book"
+		};
+		repository.Bookstore.InsertManyBooks.Execute(actionParameter);
+		//scope.CommitAndClose()
+	}
 }

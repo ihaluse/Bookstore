@@ -60,12 +60,12 @@
     SqlQueryable BookInfo
         "
             SELECT
-                topicList.BookID,
-                NumberOfTopics = COUNT(topicList.ID)
+                BookID ID, 
+                NumberOfTopics = COUNT(ID)
             FROM
-                Bookstore.BookTopic topicList
+                Bookstore.BookTopic
             GROUP BY
-                topicList.BookID
+                BookID
         "
     {
     Extends Bookstore.Book;

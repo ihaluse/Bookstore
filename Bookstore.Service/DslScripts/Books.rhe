@@ -10,10 +10,185 @@
 
         DateTime AuthorModified {ModificationTimeOf Bookstore.Book.Author;}
 
+        ItemFilter LongBooks 'book => book.NumberOfPages >= 500';
+        
+
+        ComposableFilterBy LongBooks2 '(query, repository, parameter) =>
+            {
+                return query.Where(item => item.NumberOfPages >= 500);
+            }';
+
+            ComposableFilterBy LongBooks3 '(query, repository, parameter) =>
+            {
+                var filtered = query.Where(item => item.NumberOfPages >= parameter.MinimumPages);
+                if (parameter.ForeignBooksOnly == true)
+                    filtered = filtered.Where(item => item.Extension_ForeignBook.ID != null);
+                return filtered;
+            }';
+
         ItemFilter CommonMisspelling 'book => book.Title.Contains("curiousity")';
         InvalidData CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
 
+        ItemFilter ForeignAuthorXWithComments 'item =>
+            item.Author.Name.StartsWith("D")
+            && item.Extension_ForeignBook.ID != null
+            && _domRepository.Bookstore.Comment.Subquery.Where(c => c.BookID == item.ID).Count() >= 3';
+
+
+        FilterBy ComplexSearch '(repository, parameter) =>
+        {
+            var query = repository.Bookstore.Book.Query(item => item.NumberOfPages >= parameter.MinimumPages);
+            if (parameter.ForeignBooksOnly == true)
+                query = query.Where(item => item.Extension_ForeignBook.ID != null);
+            Book[] books = query.ToSimple().ToArray();
+
+            if (parameter.MaskTitles == true)
+                foreach (var book in books.Where(b => !string.IsNullOrEmpty(b.Title)))
+                    book.Title = book.Title.First() + "***" + book.Title.Last();
+
+            return books;
+        }';
+
+
         Logging { AllProperties; }
+    }
+
+    SqlView BooksWithAuthors <SQL\BooksWithAuthors2.sql>;
+
+    Entity UncertainWord
+    {
+        ShortString Word;
+    }
+
+    Entity Disposal
+    {
+        Reference Book { Required; }
+        LongString Explanation { Required; }
+        DateTime EffectiveSince { CreationTime; }
+
+        ItemFilter ImportantBookExplanation 'item => item.Book.Title.Contains("important") && item.Explanation.Length < 50';
+        InvalidData ImportantBookExplanation 'When disposing an important book, the explanation should be at least 50 characters long.'
+        {
+            MarkProperty Bookstore.Disposal.Explanation;
+            ErrorMetadata 'Severity' 'Low';
+        }
+
+        ItemFilter ExplanationSpecialCharacters 'item => item.Explanation.Contains("#") || item.Explanation.Contains("$")';
+        InvalidData ExplanationSpecialCharacters 'The explanation should not contain special characters.'
+        {
+            // Full control over validation's error message and metadata:
+            MessageFunction 'ids => this.Query(ids)
+            .Select(item => new { item.ID, BookTitle = item.Book.Title })
+            .ToList()
+            .Select(item => new InvalidDataMessage
+            {
+                ID = item.ID,
+                Message = "The explanation for \"{0}\" contains character \"#\" or \"$\".",
+                MessageParameters = new object[] { item.BookTitle },
+                Metadata = metadata
+            })';
+        }
+
+        ItemFilter ExplanationTooLong 'item => item.Explanation.Length > 500';
+        InvalidData ExplanationTooLong 'The {0} cannot be longer then {1} characters.'
+        {
+            MessageParametersConstant '"Explanation", 500';
+        }
+
+        ItemFilter HighRating 'item => item.Book.Extension_BookRating.Rating > 100';
+        InvalidData HighRating 'You are not allowed to dispose a book with rating above 100.';
+
+        ItemFilter UncertainExplanations 'disposal => _domRepository.Bookstore.UncertainWord.Subquery
+        .Any(uncertain => disposal.Explanation.Contains(uncertain.Word))';
+        InvalidData UncertainExplanations 'The explanation "{0}{1}" should not contain word "{2}". Book: {3}.'
+        {
+            MessageParametersItem 'item => new
+            {
+                item.ID,
+                P0 = item.Explanation.Substring(0, 10),
+                P1 = item.Explanation.Length > 10 ? "..." : "",
+                P2 = _domRepository.Bookstore.UncertainWord.Subquery
+                    .Where(uncertain => item.Explanation.Contains(uncertain.Word))
+                    .Select(uncertain => uncertain.Word).FirstOrDefault(),
+                P3 = item.Book.Title
+            }';
+        }
+
+         ComposableFilterBy UncertainExplanations2 '(query, repository, parameter) =>
+        {
+            var uncertainWords = _domRepository.Bookstore.UncertainWord.Query().Select(uncertain => uncertain.Word);
+            return query.Where(disposal => uncertainWords.Any(word => disposal.Explanation.Contains(word)));
+        }';
+        InvalidData UncertainExplanations2 'The explanation contains uncertain words. (v2)';
+    }
+
+    Parameter UncertainExplanations2;
+
+    Entity BookRating
+    {
+        Extends Bookstore.Book;
+        Decimal Rating; // ComputedFrom Bookstore.ComputeBookRating
+    }
+
+    Browse BookGrid_WishList Bookstore.Book
+    {
+        Take Code;
+        Take Title;
+        Take 'Author.Name';
+        Take TranslatorName 'Extension_ForeignBook.Translator.Name';
+        //Take Description 'Extension_BookDescription.Description';
+        Take NumberOfComments 'Extension_BookInfo_EDU.NumberOfComments';
+
+        // This query is an alternative data source for BookGrid.
+        // Instead of reading data from the `Bookstore.Book`, it provides the new data from WantedBooks.
+        Query 'Bookstore.WantedBooks' 'parameter =>
+            {
+                var wishList = _domRepository.Bookstore.WishList.Query();
+                if (parameter != null && parameter.HighPriorityOnly == true)
+                    wishList = wishList.Where(item => item.HighPriority == true);
+
+                var wantedBooks = wishList.Select(wish => new Common.Queryable.Bookstore_BookGrid_WishList
+                {
+                    // All properies must be declared here, otherwise EF will throw a NotSupportedException.
+                    ID = wish.ID,
+                    Code = null,
+                    Title = wish.BookTitle,
+                    AuthorName = "unknown",
+                    TranslatorName = null,
+                    //Description = null,
+                    NumberOfComments = null
+                });
+                return wantedBooks;
+            }';
+    }
+
+     Entity WishList
+    {
+        ShortString BookTitle;
+        Bool HighPriority;
+    }
+
+    Parameter WantedBooks
+    {
+        Bool HighPriorityOnly;
+    }
+
+    Parameter ComplexSearch
+    {
+        Integer MinimumPages;
+        Bool ForeignBooksOnly;
+        Bool MaskTitles;
+    }
+
+    Parameter LongBooks2
+    {
+      
+    }
+
+    Parameter LongBooks3
+    {
+        Integer MinimumPages;
+        Bool ForeignBooksOnly;
     }
 
     Entity ChildrensBook{
@@ -37,6 +212,23 @@
     Entity Person{
         ShortString Name;
         Logging;
+    }
+
+    SqlQueryable TotalBooksByAuthor
+        "
+            SELECT
+                ID, 
+                NumberOfBooks = COUNT(ID)
+            FROM
+                Bookstore.BooksWithAuthors
+            GROUP BY
+                ID
+        "
+    {
+        Extends Bookstore.Person;
+        Integer NumberOfBooks;
+
+        AutodetectSqlDependencies;
     }
 
     Entity Comment{
@@ -68,13 +260,13 @@
                 BookID
         "
     {
-    Extends Bookstore.Book;
-    Integer NumberOfTopics;
+        Extends Bookstore.Book;
+        Integer NumberOfTopics;
 
-    AutodetectSqlDependencies;
+        AutodetectSqlDependencies;
     }
 
-     Browse BookGrid Bookstore.Book
+    Browse BookGrid Bookstore.Book
     {
         Take Title;
         Take 'Author.Name';

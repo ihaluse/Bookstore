@@ -1,1 +1,1 @@
-{ "Rhetos": { "AppSecurity": { "AllClaimsForAnonymous": true } } }
+{ "Rhetos": { "AppSecurity": { "AllClaimsForUsers": "OS\\ihalusek@IHALUSEK-LAP" } } }

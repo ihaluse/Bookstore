@@ -328,7 +328,7 @@
 
             <authentication>
 
-                <anonymousAuthentication enabled="false" userName="" />
+                <anonymousAuthentication enabled="true" userName="" />
 
                 <basicAuthentication enabled="false" />
 
@@ -339,7 +339,7 @@
                 <iisClientCertificateMappingAuthentication enabled="false">
                 </iisClientCertificateMappingAuthentication>
 
-                <windowsAuthentication enabled="true">
+                <windowsAuthentication enabled="false">
                     <providers>
                         <add value="Negotiate" />
                         <add value="NTLM" />

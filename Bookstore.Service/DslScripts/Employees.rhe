@@ -2,6 +2,7 @@ Module Bookstore{
     
     Entity Employee{
 
+        ShortString UserName;
         Integer IdentificationNumber;
         ShortString LastName { Required; }
         ShortString FirstName { Required; }

@@ -8,6 +8,19 @@
         Reference Author Bookstore.Person;
         DateTime InStoreFrom { CreationTime; }
 
+        Reference AssignedTo Bookstore.Employee;
+
+        AllowRead EveryoneCanRead 'context =>
+            {return book => true;}
+        ';
+
+        AllowWrite OwnerCanWrite 'context =>
+            {return book => book.AssignedTo.UserName == context.UserInfo.UserName;}
+        ';
+        
+
+
+
         MonitoredRecords;
 
         PhoneNumber MobilePhone;
@@ -257,9 +270,23 @@
     Entity Comment{
         Reference Book {Detail;}
         LongString Text;
+
+        RowPermissions{
+            AllowRead EveryoneCanRead 'context =>
+                {return comment => true;}
+            ';
+
+            AllowWrite OwnerCanWrite 'context =>
+                {return comment => comment.Book.AssignedTo.UserName == context.UserInfo.UserName;}
+            ';
+
+            //InheritFrom Bookstore.Comment.Book;
+        }
         
         Deactivatable;
     }
+
+    //AutoInheritRowPermissions;
 
     Entity Topic{
         DenyUserEdit;

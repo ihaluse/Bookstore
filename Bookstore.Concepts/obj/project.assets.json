@@ -1,0 +1,2424 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "Autofac/4.9.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Autofac.dll": {}
+        }
+      },
+      "Autofac.Wcf/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "[3.3.1, 5.0.0)"
+        },
+        "frameworkAssemblies": [
+          "System.ServiceModel",
+          "System.ServiceModel.Activation"
+        ],
+        "compile": {
+          "lib/net45/Autofac.Integration.Wcf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Autofac.Integration.Wcf.dll": {}
+        }
+      },
+      "EntityFramework/6.1.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Web.Xdt/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Web.XmlTransform.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Web.XmlTransform.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NLog/4.6.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Configuration",
+          "System.Core",
+          "System.Data",
+          "System.IO.Compression",
+          "System.Runtime.Serialization",
+          "System.ServiceModel",
+          "System.Transactions",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NLog.dll": {}
+        }
+      },
+      "NuGet.Core/2.14.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.Xdt": "2.1.0"
+        },
+        "compile": {
+          "lib/net40-Client/NuGet.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/NuGet.Core.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess/12.1.24160719": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
+      "Rhetos/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.9.4",
+          "Autofac.Wcf": "4.1.0",
+          "EntityFramework": "6.1.3",
+          "Microsoft.Web.Xdt": "2.1.1",
+          "NLog": "4.6.7",
+          "Newtonsoft.Json": "12.0.2",
+          "NuGet.Core": "2.14.0",
+          "Oracle.ManagedDataAccess": "12.1.24160719",
+          "System.CodeDom": "4.7.0",
+          "System.CommandLine": "2.0.0-beta1.20071.2",
+          "System.ComponentModel.Composition": "4.7.0",
+          "System.Configuration.ConfigurationManager": "4.7.0",
+          "System.Data.SqlClient": "4.8.1"
+        },
+        "compile": {
+          "lib/net472/Rhetos.Compiler.Interfaces.dll": {},
+          "lib/net472/Rhetos.Compiler.dll": {},
+          "lib/net472/Rhetos.Configuration.Autofac.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.Interfaces.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.dll": {},
+          "lib/net472/Rhetos.Deployment.Interfaces.dll": {},
+          "lib/net472/Rhetos.Deployment.dll": {},
+          "lib/net472/Rhetos.Dom.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.dll": {},
+          "lib/net472/Rhetos.Dsl.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dsl.dll": {},
+          "lib/net472/Rhetos.Extensibility.Interfaces.dll": {},
+          "lib/net472/Rhetos.Extensibility.dll": {},
+          "lib/net472/Rhetos.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.dll": {},
+          "lib/net472/Rhetos.Persistence.Interfaces.dll": {},
+          "lib/net472/Rhetos.Persistence.dll": {},
+          "lib/net472/Rhetos.Processing.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.dll": {},
+          "lib/net472/Rhetos.Security.Interfaces.dll": {},
+          "lib/net472/Rhetos.Security.dll": {},
+          "lib/net472/Rhetos.TestCommon.dll": {},
+          "lib/net472/Rhetos.Utilities.dll": {},
+          "lib/net472/Rhetos.Web.dll": {},
+          "lib/net472/Rhetos.XmlSerialization.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Rhetos.Compiler.Interfaces.dll": {},
+          "lib/net472/Rhetos.Compiler.dll": {},
+          "lib/net472/Rhetos.Configuration.Autofac.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.Interfaces.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.dll": {},
+          "lib/net472/Rhetos.Deployment.Interfaces.dll": {},
+          "lib/net472/Rhetos.Deployment.dll": {},
+          "lib/net472/Rhetos.Dom.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.dll": {},
+          "lib/net472/Rhetos.Dsl.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dsl.dll": {},
+          "lib/net472/Rhetos.Extensibility.Interfaces.dll": {},
+          "lib/net472/Rhetos.Extensibility.dll": {},
+          "lib/net472/Rhetos.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.dll": {},
+          "lib/net472/Rhetos.Persistence.Interfaces.dll": {},
+          "lib/net472/Rhetos.Persistence.dll": {},
+          "lib/net472/Rhetos.Processing.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.dll": {},
+          "lib/net472/Rhetos.Security.Interfaces.dll": {},
+          "lib/net472/Rhetos.Security.dll": {},
+          "lib/net472/Rhetos.TestCommon.dll": {},
+          "lib/net472/Rhetos.Utilities.dll": {},
+          "lib/net472/Rhetos.Web.dll": {},
+          "lib/net472/Rhetos.XmlSerialization.dll": {}
+        }
+      },
+      "Rhetos.CommonConcepts/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Rhetos": "[4.3.0, 4.4.0)"
+        },
+        "compile": {
+          "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dsl.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dsl.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.CodeDom/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.CodeDom.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.CodeDom.dll": {}
+        }
+      },
+      "System.CommandLine/2.0.0-beta1.20071.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.1",
+          "system.memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.CommandLine.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.CommandLine.dll": {}
+        }
+      },
+      "System.ComponentModel.Composition/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.Composition"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Permissions": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Configuration",
+          "System.Drawing",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Configuration.ConfigurationManager.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.8.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/net461/System.Data.SqlClient.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Security.AccessControl/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net461/System.Security.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Permissions/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Configuration",
+          "System.Data",
+          "System.Data.OracleClient",
+          "System.Drawing",
+          "System.Net",
+          "System.Security",
+          "System.ServiceProcess",
+          "System.Transactions",
+          "WindowsBase",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Permissions.dll": {}
+        }
+      },
+      "System.Security.Principal.Windows/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Principal.Windows.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net461/System.Security.Principal.Windows.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win": {
+      "Autofac/4.9.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Autofac.dll": {}
+        }
+      },
+      "Autofac.Wcf/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "[3.3.1, 5.0.0)"
+        },
+        "frameworkAssemblies": [
+          "System.ServiceModel",
+          "System.ServiceModel.Activation"
+        ],
+        "compile": {
+          "lib/net45/Autofac.Integration.Wcf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Autofac.Integration.Wcf.dll": {}
+        }
+      },
+      "EntityFramework/6.1.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Web.Xdt/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Web.XmlTransform.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Web.XmlTransform.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NLog/4.6.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Configuration",
+          "System.Core",
+          "System.Data",
+          "System.IO.Compression",
+          "System.Runtime.Serialization",
+          "System.ServiceModel",
+          "System.Transactions",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NLog.dll": {}
+        }
+      },
+      "NuGet.Core/2.14.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.Xdt": "2.1.0"
+        },
+        "compile": {
+          "lib/net40-Client/NuGet.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/NuGet.Core.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess/12.1.24160719": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
+      "Rhetos/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.9.4",
+          "Autofac.Wcf": "4.1.0",
+          "EntityFramework": "6.1.3",
+          "Microsoft.Web.Xdt": "2.1.1",
+          "NLog": "4.6.7",
+          "Newtonsoft.Json": "12.0.2",
+          "NuGet.Core": "2.14.0",
+          "Oracle.ManagedDataAccess": "12.1.24160719",
+          "System.CodeDom": "4.7.0",
+          "System.CommandLine": "2.0.0-beta1.20071.2",
+          "System.ComponentModel.Composition": "4.7.0",
+          "System.Configuration.ConfigurationManager": "4.7.0",
+          "System.Data.SqlClient": "4.8.1"
+        },
+        "compile": {
+          "lib/net472/Rhetos.Compiler.Interfaces.dll": {},
+          "lib/net472/Rhetos.Compiler.dll": {},
+          "lib/net472/Rhetos.Configuration.Autofac.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.Interfaces.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.dll": {},
+          "lib/net472/Rhetos.Deployment.Interfaces.dll": {},
+          "lib/net472/Rhetos.Deployment.dll": {},
+          "lib/net472/Rhetos.Dom.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.dll": {},
+          "lib/net472/Rhetos.Dsl.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dsl.dll": {},
+          "lib/net472/Rhetos.Extensibility.Interfaces.dll": {},
+          "lib/net472/Rhetos.Extensibility.dll": {},
+          "lib/net472/Rhetos.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.dll": {},
+          "lib/net472/Rhetos.Persistence.Interfaces.dll": {},
+          "lib/net472/Rhetos.Persistence.dll": {},
+          "lib/net472/Rhetos.Processing.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.dll": {},
+          "lib/net472/Rhetos.Security.Interfaces.dll": {},
+          "lib/net472/Rhetos.Security.dll": {},
+          "lib/net472/Rhetos.TestCommon.dll": {},
+          "lib/net472/Rhetos.Utilities.dll": {},
+          "lib/net472/Rhetos.Web.dll": {},
+          "lib/net472/Rhetos.XmlSerialization.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Rhetos.Compiler.Interfaces.dll": {},
+          "lib/net472/Rhetos.Compiler.dll": {},
+          "lib/net472/Rhetos.Configuration.Autofac.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.Interfaces.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.dll": {},
+          "lib/net472/Rhetos.Deployment.Interfaces.dll": {},
+          "lib/net472/Rhetos.Deployment.dll": {},
+          "lib/net472/Rhetos.Dom.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.dll": {},
+          "lib/net472/Rhetos.Dsl.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dsl.dll": {},
+          "lib/net472/Rhetos.Extensibility.Interfaces.dll": {},
+          "lib/net472/Rhetos.Extensibility.dll": {},
+          "lib/net472/Rhetos.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.dll": {},
+          "lib/net472/Rhetos.Persistence.Interfaces.dll": {},
+          "lib/net472/Rhetos.Persistence.dll": {},
+          "lib/net472/Rhetos.Processing.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.dll": {},
+          "lib/net472/Rhetos.Security.Interfaces.dll": {},
+          "lib/net472/Rhetos.Security.dll": {},
+          "lib/net472/Rhetos.TestCommon.dll": {},
+          "lib/net472/Rhetos.Utilities.dll": {},
+          "lib/net472/Rhetos.Web.dll": {},
+          "lib/net472/Rhetos.XmlSerialization.dll": {}
+        }
+      },
+      "Rhetos.CommonConcepts/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Rhetos": "[4.3.0, 4.4.0)"
+        },
+        "compile": {
+          "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dsl.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dsl.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.CodeDom/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.CodeDom.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.CodeDom.dll": {}
+        }
+      },
+      "System.CommandLine/2.0.0-beta1.20071.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.1",
+          "system.memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.CommandLine.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.CommandLine.dll": {}
+        }
+      },
+      "System.ComponentModel.Composition/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.Composition"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Permissions": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Configuration",
+          "System.Drawing",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Configuration.ConfigurationManager.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.8.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/net461/System.Data.SqlClient.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Security.AccessControl/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/net461/System.Security.AccessControl.dll": {}
+        }
+      },
+      "System.Security.Permissions/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Configuration",
+          "System.Data",
+          "System.Data.OracleClient",
+          "System.Drawing",
+          "System.Net",
+          "System.Security",
+          "System.ServiceProcess",
+          "System.Transactions",
+          "WindowsBase",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Permissions.dll": {}
+        }
+      },
+      "System.Security.Principal.Windows/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/net461/System.Security.Principal.Windows.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x64": {
+      "Autofac/4.9.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Autofac.dll": {}
+        }
+      },
+      "Autofac.Wcf/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "[3.3.1, 5.0.0)"
+        },
+        "frameworkAssemblies": [
+          "System.ServiceModel",
+          "System.ServiceModel.Activation"
+        ],
+        "compile": {
+          "lib/net45/Autofac.Integration.Wcf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Autofac.Integration.Wcf.dll": {}
+        }
+      },
+      "EntityFramework/6.1.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Web.Xdt/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Web.XmlTransform.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Web.XmlTransform.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NLog/4.6.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Configuration",
+          "System.Core",
+          "System.Data",
+          "System.IO.Compression",
+          "System.Runtime.Serialization",
+          "System.ServiceModel",
+          "System.Transactions",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NLog.dll": {}
+        }
+      },
+      "NuGet.Core/2.14.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.Xdt": "2.1.0"
+        },
+        "compile": {
+          "lib/net40-Client/NuGet.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/NuGet.Core.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess/12.1.24160719": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
+      "Rhetos/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.9.4",
+          "Autofac.Wcf": "4.1.0",
+          "EntityFramework": "6.1.3",
+          "Microsoft.Web.Xdt": "2.1.1",
+          "NLog": "4.6.7",
+          "Newtonsoft.Json": "12.0.2",
+          "NuGet.Core": "2.14.0",
+          "Oracle.ManagedDataAccess": "12.1.24160719",
+          "System.CodeDom": "4.7.0",
+          "System.CommandLine": "2.0.0-beta1.20071.2",
+          "System.ComponentModel.Composition": "4.7.0",
+          "System.Configuration.ConfigurationManager": "4.7.0",
+          "System.Data.SqlClient": "4.8.1"
+        },
+        "compile": {
+          "lib/net472/Rhetos.Compiler.Interfaces.dll": {},
+          "lib/net472/Rhetos.Compiler.dll": {},
+          "lib/net472/Rhetos.Configuration.Autofac.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.Interfaces.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.dll": {},
+          "lib/net472/Rhetos.Deployment.Interfaces.dll": {},
+          "lib/net472/Rhetos.Deployment.dll": {},
+          "lib/net472/Rhetos.Dom.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.dll": {},
+          "lib/net472/Rhetos.Dsl.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dsl.dll": {},
+          "lib/net472/Rhetos.Extensibility.Interfaces.dll": {},
+          "lib/net472/Rhetos.Extensibility.dll": {},
+          "lib/net472/Rhetos.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.dll": {},
+          "lib/net472/Rhetos.Persistence.Interfaces.dll": {},
+          "lib/net472/Rhetos.Persistence.dll": {},
+          "lib/net472/Rhetos.Processing.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.dll": {},
+          "lib/net472/Rhetos.Security.Interfaces.dll": {},
+          "lib/net472/Rhetos.Security.dll": {},
+          "lib/net472/Rhetos.TestCommon.dll": {},
+          "lib/net472/Rhetos.Utilities.dll": {},
+          "lib/net472/Rhetos.Web.dll": {},
+          "lib/net472/Rhetos.XmlSerialization.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Rhetos.Compiler.Interfaces.dll": {},
+          "lib/net472/Rhetos.Compiler.dll": {},
+          "lib/net472/Rhetos.Configuration.Autofac.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.Interfaces.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.dll": {},
+          "lib/net472/Rhetos.Deployment.Interfaces.dll": {},
+          "lib/net472/Rhetos.Deployment.dll": {},
+          "lib/net472/Rhetos.Dom.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.dll": {},
+          "lib/net472/Rhetos.Dsl.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dsl.dll": {},
+          "lib/net472/Rhetos.Extensibility.Interfaces.dll": {},
+          "lib/net472/Rhetos.Extensibility.dll": {},
+          "lib/net472/Rhetos.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.dll": {},
+          "lib/net472/Rhetos.Persistence.Interfaces.dll": {},
+          "lib/net472/Rhetos.Persistence.dll": {},
+          "lib/net472/Rhetos.Processing.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.dll": {},
+          "lib/net472/Rhetos.Security.Interfaces.dll": {},
+          "lib/net472/Rhetos.Security.dll": {},
+          "lib/net472/Rhetos.TestCommon.dll": {},
+          "lib/net472/Rhetos.Utilities.dll": {},
+          "lib/net472/Rhetos.Web.dll": {},
+          "lib/net472/Rhetos.XmlSerialization.dll": {}
+        }
+      },
+      "Rhetos.CommonConcepts/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Rhetos": "[4.3.0, 4.4.0)"
+        },
+        "compile": {
+          "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dsl.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dsl.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.CodeDom/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.CodeDom.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.CodeDom.dll": {}
+        }
+      },
+      "System.CommandLine/2.0.0-beta1.20071.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.1",
+          "system.memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.CommandLine.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.CommandLine.dll": {}
+        }
+      },
+      "System.ComponentModel.Composition/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.Composition"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Permissions": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Configuration",
+          "System.Drawing",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Configuration.ConfigurationManager.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.8.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Data.SqlClient.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Security.AccessControl/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.AccessControl.dll": {}
+        }
+      },
+      "System.Security.Permissions/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Configuration",
+          "System.Data",
+          "System.Data.OracleClient",
+          "System.Drawing",
+          "System.Net",
+          "System.Security",
+          "System.ServiceProcess",
+          "System.Transactions",
+          "WindowsBase",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Permissions.dll": {}
+        }
+      },
+      "System.Security.Principal.Windows/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Principal.Windows.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "Autofac/4.9.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Autofac.dll": {}
+        }
+      },
+      "Autofac.Wcf/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "[3.3.1, 5.0.0)"
+        },
+        "frameworkAssemblies": [
+          "System.ServiceModel",
+          "System.ServiceModel.Activation"
+        ],
+        "compile": {
+          "lib/net45/Autofac.Integration.Wcf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Autofac.Integration.Wcf.dll": {}
+        }
+      },
+      "EntityFramework/6.1.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Web.Xdt/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Web.XmlTransform.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Web.XmlTransform.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NLog/4.6.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Configuration",
+          "System.Core",
+          "System.Data",
+          "System.IO.Compression",
+          "System.Runtime.Serialization",
+          "System.ServiceModel",
+          "System.Transactions",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NLog.dll": {}
+        }
+      },
+      "NuGet.Core/2.14.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.Xdt": "2.1.0"
+        },
+        "compile": {
+          "lib/net40-Client/NuGet.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/NuGet.Core.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess/12.1.24160719": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
+      "Rhetos/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.9.4",
+          "Autofac.Wcf": "4.1.0",
+          "EntityFramework": "6.1.3",
+          "Microsoft.Web.Xdt": "2.1.1",
+          "NLog": "4.6.7",
+          "Newtonsoft.Json": "12.0.2",
+          "NuGet.Core": "2.14.0",
+          "Oracle.ManagedDataAccess": "12.1.24160719",
+          "System.CodeDom": "4.7.0",
+          "System.CommandLine": "2.0.0-beta1.20071.2",
+          "System.ComponentModel.Composition": "4.7.0",
+          "System.Configuration.ConfigurationManager": "4.7.0",
+          "System.Data.SqlClient": "4.8.1"
+        },
+        "compile": {
+          "lib/net472/Rhetos.Compiler.Interfaces.dll": {},
+          "lib/net472/Rhetos.Compiler.dll": {},
+          "lib/net472/Rhetos.Configuration.Autofac.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.Interfaces.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.dll": {},
+          "lib/net472/Rhetos.Deployment.Interfaces.dll": {},
+          "lib/net472/Rhetos.Deployment.dll": {},
+          "lib/net472/Rhetos.Dom.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.dll": {},
+          "lib/net472/Rhetos.Dsl.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dsl.dll": {},
+          "lib/net472/Rhetos.Extensibility.Interfaces.dll": {},
+          "lib/net472/Rhetos.Extensibility.dll": {},
+          "lib/net472/Rhetos.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.dll": {},
+          "lib/net472/Rhetos.Persistence.Interfaces.dll": {},
+          "lib/net472/Rhetos.Persistence.dll": {},
+          "lib/net472/Rhetos.Processing.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.dll": {},
+          "lib/net472/Rhetos.Security.Interfaces.dll": {},
+          "lib/net472/Rhetos.Security.dll": {},
+          "lib/net472/Rhetos.TestCommon.dll": {},
+          "lib/net472/Rhetos.Utilities.dll": {},
+          "lib/net472/Rhetos.Web.dll": {},
+          "lib/net472/Rhetos.XmlSerialization.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Rhetos.Compiler.Interfaces.dll": {},
+          "lib/net472/Rhetos.Compiler.dll": {},
+          "lib/net472/Rhetos.Configuration.Autofac.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.Interfaces.dll": {},
+          "lib/net472/Rhetos.DatabaseGenerator.dll": {},
+          "lib/net472/Rhetos.Deployment.Interfaces.dll": {},
+          "lib/net472/Rhetos.Deployment.dll": {},
+          "lib/net472/Rhetos.Dom.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.dll": {},
+          "lib/net472/Rhetos.Dsl.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dsl.dll": {},
+          "lib/net472/Rhetos.Extensibility.Interfaces.dll": {},
+          "lib/net472/Rhetos.Extensibility.dll": {},
+          "lib/net472/Rhetos.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.Interfaces.dll": {},
+          "lib/net472/Rhetos.Logging.dll": {},
+          "lib/net472/Rhetos.Persistence.Interfaces.dll": {},
+          "lib/net472/Rhetos.Persistence.dll": {},
+          "lib/net472/Rhetos.Processing.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.dll": {},
+          "lib/net472/Rhetos.Security.Interfaces.dll": {},
+          "lib/net472/Rhetos.Security.dll": {},
+          "lib/net472/Rhetos.TestCommon.dll": {},
+          "lib/net472/Rhetos.Utilities.dll": {},
+          "lib/net472/Rhetos.Web.dll": {},
+          "lib/net472/Rhetos.XmlSerialization.dll": {}
+        }
+      },
+      "Rhetos.CommonConcepts/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Rhetos": "[4.3.0, 4.4.0)"
+        },
+        "compile": {
+          "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dsl.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.dll": {},
+          "lib/net472/Rhetos.Dom.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Dsl.DefaultConcepts.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.dll": {},
+          "lib/net472/Rhetos.Processing.DefaultCommands.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.CodeDom/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.CodeDom.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.CodeDom.dll": {}
+        }
+      },
+      "System.CommandLine/2.0.0-beta1.20071.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.1",
+          "system.memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.CommandLine.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.CommandLine.dll": {}
+        }
+      },
+      "System.ComponentModel.Composition/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.Composition"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Permissions": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Configuration",
+          "System.Drawing",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Configuration.ConfigurationManager.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.8.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Data.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Data.SqlClient.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Security.AccessControl/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.AccessControl.dll": {}
+        }
+      },
+      "System.Security.Permissions/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.7.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Configuration",
+          "System.Data",
+          "System.Data.OracleClient",
+          "System.Drawing",
+          "System.Net",
+          "System.Security",
+          "System.ServiceProcess",
+          "System.Transactions",
+          "WindowsBase",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Permissions.dll": {}
+        }
+      },
+      "System.Security.Principal.Windows/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Principal.Windows.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Autofac/4.9.4": {
+      "sha512": "dYiDG4yoV7GDCoOc66d1sqMmg2gwDyomHKgATuMfhFzYxVpWEltToHVHXI3I9vOEvIXE55S4OZPY0ldiZmZtpA==",
+      "type": "package",
+      "path": "autofac/4.9.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofac.4.9.4.nupkg.sha512",
+        "autofac.nuspec",
+        "lib/net45/Autofac.dll",
+        "lib/net45/Autofac.pdb",
+        "lib/net45/Autofac.xml",
+        "lib/netstandard1.1/Autofac.dll",
+        "lib/netstandard1.1/Autofac.pdb",
+        "lib/netstandard1.1/Autofac.xml",
+        "lib/netstandard2.0/Autofac.dll",
+        "lib/netstandard2.0/Autofac.pdb",
+        "lib/netstandard2.0/Autofac.xml"
+      ]
+    },
+    "Autofac.Wcf/4.1.0": {
+      "sha512": "qaKu9PISoUFl+k62rsJ0DJICi2iCj0aEDeqOl6JJy5A4igvyOLh7Fs0TEwW9F464qUejXYP2zkl5NpZkDTMddw==",
+      "type": "package",
+      "path": "autofac.wcf/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofac.wcf.4.1.0.nupkg.sha512",
+        "autofac.wcf.nuspec",
+        "lib/net45/Autofac.Integration.Wcf.dll",
+        "lib/net45/Autofac.Integration.Wcf.xml"
+      ]
+    },
+    "EntityFramework/6.1.3": {
+      "sha512": "2xzFHAF3VVdmTR3//MygtQpwfbDjeaq+nQwCcokLzen7MKHOojPaxNPQPa4diHY1QtcR7zlHAJHNRqPB7W2Syw==",
+      "type": "package",
+      "path": "entityframework/6.1.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/App.config.transform",
+        "content/Web.config.transform",
+        "entityframework.6.1.3.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "tools/EntityFramework.PowerShell.Utility.dll",
+        "tools/EntityFramework.PowerShell.dll",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/about_EntityFramework.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/migrate.exe"
+      ]
+    },
+    "Microsoft.CSharp/4.4.1": {
+      "sha512": "A5hI3gk6WpcBI0QGZY6/d5CCaYUxJgi7iENn1uYEng+Olo8RfI5ReGVkjXjeu3VR3srLvVYREATXa2M0X7FYJA==",
+      "type": "package",
+      "path": "microsoft.csharp/4.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.4.1.nupkg.sha512",
+        "microsoft.csharp.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.CSharp.dll",
+        "ref/netcore50/Microsoft.CSharp.xml",
+        "ref/netcore50/de/Microsoft.CSharp.xml",
+        "ref/netcore50/es/Microsoft.CSharp.xml",
+        "ref/netcore50/fr/Microsoft.CSharp.xml",
+        "ref/netcore50/it/Microsoft.CSharp.xml",
+        "ref/netcore50/ja/Microsoft.CSharp.xml",
+        "ref/netcore50/ko/Microsoft.CSharp.xml",
+        "ref/netcore50/ru/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/Microsoft.CSharp.dll",
+        "ref/netstandard1.0/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Web.Xdt/2.1.1": {
+      "sha512": "PHoqib4d+f2lmnluVwMFM8M4AF8Z7y2g18hUTi5UCKkjNQIzkNnB1uyqnS5od2sMsRcI/9mexQjDO6e5dL/MeA==",
+      "type": "package",
+      "path": "microsoft.web.xdt/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.Web.XmlTransform.dll",
+        "microsoft.web.xdt.2.1.1.nupkg.sha512",
+        "microsoft.web.xdt.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "NLog/4.6.7": {
+      "sha512": "xSIzXrIF89Ww6yoJPvyBcu4JLgNiDiEaTT4GyVltZEeVIvkgSm9J/srUy1Yz0EXwbTv502l8knoCFrgNc/MUMA==",
+      "type": "package",
+      "path": "nlog/4.6.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/NLog.dll",
+        "lib/monoandroid44/NLog.xml",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net40-client/NLog.dll",
+        "lib/net40-client/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "lib/sl4/NLog.dll",
+        "lib/sl4/NLog.xml",
+        "lib/sl5/NLog.dll",
+        "lib/sl5/NLog.xml",
+        "lib/wp8/NLog.dll",
+        "lib/wp8/NLog.xml",
+        "lib/xamarinios10/NLog.dll",
+        "lib/xamarinios10/NLog.xml",
+        "nlog.4.6.7.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
+    "NuGet.Core/2.14.0": {
+      "sha512": "UDXFLVRDepqVqyYxQuxujfaAc7XePdw+Lsey+q36iqTm0nuSU1n9laIGqjokvBl0unifYtjSai7fqBQKKd9BUg==",
+      "type": "package",
+      "path": "nuget.core/2.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40-Client/NuGet.Core.dll",
+        "nuget.core.2.14.0.nupkg.sha512",
+        "nuget.core.nuspec"
+      ]
+    },
+    "Oracle.ManagedDataAccess/12.1.24160719": {
+      "sha512": "pReqLaC0COhVsFqw9dgvTg7DtbTLDwbnlMQ4iYH/Q7ba1goKb3tS3q/cQEDLTXhOKeQDOldONi/7f/0TrTXXwQ==",
+      "type": "package",
+      "path": "oracle.manageddataaccess/12.1.24160719",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bin/x64/Oracle.ManagedDataAccessDTC.dll",
+        "bin/x64/Oracle.ManagedDataAccessIOP.dll",
+        "bin/x86/Oracle.ManagedDataAccessDTC.dll",
+        "bin/x86/Oracle.ManagedDataAccessIOP.dll",
+        "content/net40/App.config.install.xdt",
+        "content/net40/App.config.transform",
+        "content/net40/App.config.uninstall.xdt",
+        "content/net40/Web.config.install.xdt",
+        "content/net40/Web.config.transform",
+        "content/net40/Web.config.uninstall.xdt",
+        "info.txt",
+        "lib/net40/Oracle.ManagedDataAccess.dll",
+        "oracle.manageddataaccess.12.1.24160719.nupkg.sha512",
+        "oracle.manageddataaccess.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Rhetos/4.3.0": {
+      "sha512": "bGDM0/gKoarvsP3MSo07ozOpvtm5q9byml+YF91nn0b6m7Hhu9k3h3vRc/U0TsLgY5FQtxMTU14pNTAguLCWHQ==",
+      "type": "package",
+      "path": "rhetos/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/Rhetos.Compiler.Interfaces.dll",
+        "lib/net472/Rhetos.Compiler.Interfaces.pdb",
+        "lib/net472/Rhetos.Compiler.Interfaces.xml",
+        "lib/net472/Rhetos.Compiler.dll",
+        "lib/net472/Rhetos.Compiler.pdb",
+        "lib/net472/Rhetos.Compiler.xml",
+        "lib/net472/Rhetos.Configuration.Autofac.dll",
+        "lib/net472/Rhetos.Configuration.Autofac.pdb",
+        "lib/net472/Rhetos.Configuration.Autofac.xml",
+        "lib/net472/Rhetos.DatabaseGenerator.Interfaces.dll",
+        "lib/net472/Rhetos.DatabaseGenerator.Interfaces.pdb",
+        "lib/net472/Rhetos.DatabaseGenerator.Interfaces.xml",
+        "lib/net472/Rhetos.DatabaseGenerator.dll",
+        "lib/net472/Rhetos.DatabaseGenerator.pdb",
+        "lib/net472/Rhetos.DatabaseGenerator.xml",
+        "lib/net472/Rhetos.Deployment.Interfaces.dll",
+        "lib/net472/Rhetos.Deployment.Interfaces.pdb",
+        "lib/net472/Rhetos.Deployment.Interfaces.xml",
+        "lib/net472/Rhetos.Deployment.dll",
+        "lib/net472/Rhetos.Deployment.pdb",
+        "lib/net472/Rhetos.Deployment.xml",
+        "lib/net472/Rhetos.Dom.Interfaces.dll",
+        "lib/net472/Rhetos.Dom.Interfaces.pdb",
+        "lib/net472/Rhetos.Dom.Interfaces.xml",
+        "lib/net472/Rhetos.Dom.dll",
+        "lib/net472/Rhetos.Dom.pdb",
+        "lib/net472/Rhetos.Dom.xml",
+        "lib/net472/Rhetos.Dsl.Interfaces.dll",
+        "lib/net472/Rhetos.Dsl.Interfaces.pdb",
+        "lib/net472/Rhetos.Dsl.Interfaces.xml",
+        "lib/net472/Rhetos.Dsl.dll",
+        "lib/net472/Rhetos.Dsl.pdb",
+        "lib/net472/Rhetos.Dsl.xml",
+        "lib/net472/Rhetos.Extensibility.Interfaces.dll",
+        "lib/net472/Rhetos.Extensibility.Interfaces.pdb",
+        "lib/net472/Rhetos.Extensibility.Interfaces.xml",
+        "lib/net472/Rhetos.Extensibility.dll",
+        "lib/net472/Rhetos.Extensibility.pdb",
+        "lib/net472/Rhetos.Extensibility.xml",
+        "lib/net472/Rhetos.Interfaces.dll",
+        "lib/net472/Rhetos.Interfaces.pdb",
+        "lib/net472/Rhetos.Interfaces.xml",
+        "lib/net472/Rhetos.Logging.Interfaces.dll",
+        "lib/net472/Rhetos.Logging.Interfaces.pdb",
+        "lib/net472/Rhetos.Logging.Interfaces.xml",
+        "lib/net472/Rhetos.Logging.dll",
+        "lib/net472/Rhetos.Logging.pdb",
+        "lib/net472/Rhetos.Logging.xml",
+        "lib/net472/Rhetos.Persistence.Interfaces.dll",
+        "lib/net472/Rhetos.Persistence.Interfaces.pdb",
+        "lib/net472/Rhetos.Persistence.Interfaces.xml",
+        "lib/net472/Rhetos.Persistence.dll",
+        "lib/net472/Rhetos.Persistence.pdb",
+        "lib/net472/Rhetos.Persistence.xml",
+        "lib/net472/Rhetos.Processing.Interfaces.dll",
+        "lib/net472/Rhetos.Processing.Interfaces.pdb",
+        "lib/net472/Rhetos.Processing.Interfaces.xml",
+        "lib/net472/Rhetos.Processing.dll",
+        "lib/net472/Rhetos.Processing.pdb",
+        "lib/net472/Rhetos.Processing.xml",
+        "lib/net472/Rhetos.Security.Interfaces.dll",
+        "lib/net472/Rhetos.Security.Interfaces.pdb",
+        "lib/net472/Rhetos.Security.Interfaces.xml",
+        "lib/net472/Rhetos.Security.dll",
+        "lib/net472/Rhetos.Security.pdb",
+        "lib/net472/Rhetos.Security.xml",
+        "lib/net472/Rhetos.TestCommon.dll",
+        "lib/net472/Rhetos.TestCommon.pdb",
+        "lib/net472/Rhetos.TestCommon.xml",
+        "lib/net472/Rhetos.Utilities.dll",
+        "lib/net472/Rhetos.Utilities.pdb",
+        "lib/net472/Rhetos.Utilities.xml",
+        "lib/net472/Rhetos.Web.dll",
+        "lib/net472/Rhetos.Web.pdb",
+        "lib/net472/Rhetos.Web.xml",
+        "lib/net472/Rhetos.XmlSerialization.dll",
+        "lib/net472/Rhetos.XmlSerialization.pdb",
+        "lib/net472/Rhetos.XmlSerialization.xml",
+        "rhetos.4.3.0.nupkg.sha512",
+        "rhetos.nuspec"
+      ]
+    },
+    "Rhetos.CommonConcepts/4.3.0": {
+      "sha512": "XJSftz0os+8fgMNoGhgQLIowe+fELDkAtcHgp00a0+2+SsfGxiqBHBNw4t9IDkNMxK17Nf8zZO+S9iAllpIBkA==",
+      "type": "package",
+      "path": "rhetos.commonconcepts/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "DataMigration/0.9.12/1 - AppliedConcept Options1 Options2.sql",
+        "DataMigration/0.9.14/1 - Claim.Active.sql",
+        "DataMigration/0.9.29/1 - RoleInheritsRole renames columns.sql",
+        "DataMigration/0.9.29/2 - Permissions to RP and PP.sql",
+        "DataMigration/0.9.35/1 - A new tag in create property.sql",
+        "DataMigration/1.11/1 - DataStructureExtendsInfo to UniqueReferenceInfo.sql",
+        "DataMigration/1.3/1 - Clear excess dependencies for subtype id.sql",
+        "DataMigration/2.12/1 - Optimized index CreateQuery modification.sql",
+        "DataMigration/2.12/2 - Separate foreign key concept.sql",
+        "DataMigration/2.4/1 - KeepSynchronizedMetadata for Polymorphic.sql",
+        "DataMigration/4.3/1 - Set schema authorization to dbo.sql",
+        "DataMigration/4.3/2 - Clustered PK on migration tables.sql",
+        "DslScripts/AutoCode.rhe",
+        "DslScripts/FilterId.rhe",
+        "DslScripts/KeepSynchronizedMetadata.rhe",
+        "DslScripts/Locking.rhe",
+        "DslScripts/Logging.rhe",
+        "DslScripts/SQL/AutoCodeCacheGetNext body.sql",
+        "DslScripts/SQL/AutoCodeCacheGetNext param.sql",
+        "DslScripts/SQL/AutoCodeCacheUpdate body.sql",
+        "DslScripts/SQL/AutoCodeCacheUpdate param.sql",
+        "DslScripts/SQL/Log.ContextInfo default.MsSql.sql",
+        "DslScripts/SQL/Log.ContextInfo default.Oracle.sql",
+        "DslScripts/SQL/Log.Created default.MsSql.sql",
+        "DslScripts/SQL/Log.Created default.Oracle.sql",
+        "DslScripts/SQL/Log.UserName default.MsSql.sql",
+        "DslScripts/SQL/Log.UserName default.Oracle.sql",
+        "DslScripts/SQL/Log.Workstation default.MsSql.sql",
+        "DslScripts/SQL/Log.Workstation default.Oracle.sql",
+        "DslScripts/SQL/LogReader.MsSql.sql",
+        "DslScripts/SQL/LogReader.Oracle.sql",
+        "DslScripts/SQL/LogRelatedItemReader.MsSql.sql",
+        "DslScripts/SQL/LogRelatedItemReader.Oracle.sql",
+        "DslScripts/SQL/RelatedEvents.sql",
+        "DslScripts/Security.rhe",
+        "Readme.md",
+        "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.dll",
+        "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.pdb",
+        "lib/net472/Rhetos.DatabaseGenerator.DefaultConcepts.xml",
+        "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.dll",
+        "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.pdb",
+        "lib/net472/Rhetos.Dom.DefaultConcepts.Interfaces.xml",
+        "lib/net472/Rhetos.Dom.DefaultConcepts.dll",
+        "lib/net472/Rhetos.Dom.DefaultConcepts.pdb",
+        "lib/net472/Rhetos.Dom.DefaultConcepts.xml",
+        "lib/net472/Rhetos.Dsl.DefaultConcepts.dll",
+        "lib/net472/Rhetos.Dsl.DefaultConcepts.pdb",
+        "lib/net472/Rhetos.Dsl.DefaultConcepts.xml",
+        "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.dll",
+        "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.pdb",
+        "lib/net472/Rhetos.Processing.DefaultCommands.Interfaces.xml",
+        "lib/net472/Rhetos.Processing.DefaultCommands.dll",
+        "lib/net472/Rhetos.Processing.DefaultCommands.pdb",
+        "lib/net472/Rhetos.Processing.DefaultCommands.xml",
+        "rhetos.commonconcepts.4.3.0.nupkg.sha512",
+        "rhetos.commonconcepts.nuspec"
+      ]
+    },
+    "System.Buffers/4.4.0": {
+      "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "type": "package",
+      "path": "system.buffers/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "system.buffers.4.4.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.CodeDom/4.7.0": {
+      "sha512": "Hs9pw/kmvH3lXaZ1LFKj3pLQsiGfj2xo3sxSzwiLlRL6UcMZUTeCfoJ9Udalvn3yq5dLlPEZzYegrTQ1/LhPOQ==",
+      "type": "package",
+      "path": "system.codedom/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.CodeDom.dll",
+        "lib/net461/System.CodeDom.xml",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.xml",
+        "ref/net461/System.CodeDom.dll",
+        "ref/net461/System.CodeDom.xml",
+        "ref/netstandard2.0/System.CodeDom.dll",
+        "ref/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.4.7.0.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.CommandLine/2.0.0-beta1.20071.2": {
+      "sha512": "jlLkd6R6SUP9Dfjkg3N/0YNfkw3yWZWDHhpwuCJmnyNVLZKczeFM8VNxaIvob+Gxdl+FNL2CjeyrtJZqygIWXg==",
+      "type": "package",
+      "path": "system.commandline/2.0.0-beta1.20071.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/System.CommandLine.dll",
+        "lib/netstandard2.0/System.CommandLine.pdb",
+        "system.commandline.2.0.0-beta1.20071.2.nupkg.sha512",
+        "system.commandline.nuspec"
+      ]
+    },
+    "System.ComponentModel.Composition/4.7.0": {
+      "sha512": "TKOHGbuqp7++lEna7+p19kTR8rKeAeoo2Faab2n2q7spV2CWPevmUkghMG6POKfSdeQhtAJoNZ33FT+01CNe3g==",
+      "type": "package",
+      "path": "system.componentmodel.composition/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+        "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+        "lib/netstandard2.0/System.ComponentModel.Composition.dll",
+        "lib/netstandard2.0/System.ComponentModel.Composition.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netstandard2.0/System.ComponentModel.Composition.dll",
+        "ref/netstandard2.0/System.ComponentModel.Composition.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.composition.4.7.0.nupkg.sha512",
+        "system.componentmodel.composition.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Configuration.ConfigurationManager/4.7.0": {
+      "sha512": "/anOTeSZCNNI2zDilogWrZ8pNqCmYbzGNexUnNhjW8k0sHqEZ2nHJBp147jBV3hGYswu5lINpNg1vxR7bnqvVA==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Configuration.ConfigurationManager.dll",
+        "lib/net461/System.Configuration.ConfigurationManager.xml",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "ref/net461/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.xml",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.4.7.0.nupkg.sha512",
+        "system.configuration.configurationmanager.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Data.SqlClient/4.8.1": {
+      "sha512": "HKLykcv6eZLbLnSMnlQ6Os4+UAmFE+AgYm92CTvJYeTOBtOYusX3qu8OoGhFrnKZax91UcLcDo5vPrqvJUTSNQ==",
+      "type": "package",
+      "path": "system.data.sqlclient/4.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net451/System.Data.SqlClient.dll",
+        "lib/net46/System.Data.SqlClient.dll",
+        "lib/net461/System.Data.SqlClient.dll",
+        "lib/net461/System.Data.SqlClient.xml",
+        "lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "lib/netcoreapp2.1/System.Data.SqlClient.xml",
+        "lib/netstandard1.2/System.Data.SqlClient.dll",
+        "lib/netstandard1.2/System.Data.SqlClient.xml",
+        "lib/netstandard1.3/System.Data.SqlClient.dll",
+        "lib/netstandard1.3/System.Data.SqlClient.xml",
+        "lib/netstandard2.0/System.Data.SqlClient.dll",
+        "lib/netstandard2.0/System.Data.SqlClient.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net451/System.Data.SqlClient.dll",
+        "ref/net46/System.Data.SqlClient.dll",
+        "ref/net461/System.Data.SqlClient.dll",
+        "ref/net461/System.Data.SqlClient.xml",
+        "ref/netcoreapp2.1/System.Data.SqlClient.dll",
+        "ref/netcoreapp2.1/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/System.Data.SqlClient.dll",
+        "ref/netstandard1.2/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/de/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/es/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/fr/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/it/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ja/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ko/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/ru/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/zh-hans/System.Data.SqlClient.xml",
+        "ref/netstandard1.2/zh-hant/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/System.Data.SqlClient.dll",
+        "ref/netstandard1.3/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/de/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/es/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/fr/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/it/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ja/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ko/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/ru/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/zh-hans/System.Data.SqlClient.xml",
+        "ref/netstandard1.3/zh-hant/System.Data.SqlClient.xml",
+        "ref/netstandard2.0/System.Data.SqlClient.dll",
+        "ref/netstandard2.0/System.Data.SqlClient.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.xml",
+        "runtimes/unix/lib/netstandard1.3/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll",
+        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.xml",
+        "runtimes/win/lib/net451/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net46/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net461/System.Data.SqlClient.dll",
+        "runtimes/win/lib/net461/System.Data.SqlClient.xml",
+        "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.xml",
+        "runtimes/win/lib/netstandard1.3/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
+        "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
+        "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
+        "system.data.sqlclient.4.8.1.nupkg.sha512",
+        "system.data.sqlclient.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "type": "package",
+      "path": "system.memory/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Numerics.Vectors/4.4.0": {
+      "sha512": "UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.4.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.AccessControl/4.7.0": {
+      "sha512": "JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
+      "type": "package",
+      "path": "system.security.accesscontrol/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.xml",
+        "lib/netstandard1.3/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/System.Security.AccessControl.dll",
+        "ref/netstandard1.3/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/de/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/es/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/fr/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/it/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ja/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ko/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ru/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
+        "ref/netstandard2.0/System.Security.AccessControl.dll",
+        "ref/netstandard2.0/System.Security.AccessControl.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/win/lib/net46/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.xml",
+        "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.accesscontrol.4.7.0.nupkg.sha512",
+        "system.security.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Permissions/4.7.0": {
+      "sha512": "dkOV6YYVBnYRa15/yv004eCGRBVADXw8qRbbNiCn/XpdJSUXkkUeIvdvFHkvnko4CdKMqG8yRHC4ox83LSlMsQ==",
+      "type": "package",
+      "path": "system.security.permissions/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Security.Permissions.dll",
+        "lib/net461/System.Security.Permissions.xml",
+        "lib/netcoreapp3.0/System.Security.Permissions.dll",
+        "lib/netcoreapp3.0/System.Security.Permissions.xml",
+        "lib/netstandard2.0/System.Security.Permissions.dll",
+        "lib/netstandard2.0/System.Security.Permissions.xml",
+        "ref/net461/System.Security.Permissions.dll",
+        "ref/net461/System.Security.Permissions.xml",
+        "ref/netcoreapp3.0/System.Security.Permissions.dll",
+        "ref/netcoreapp3.0/System.Security.Permissions.xml",
+        "ref/netstandard2.0/System.Security.Permissions.dll",
+        "ref/netstandard2.0/System.Security.Permissions.xml",
+        "system.security.permissions.4.7.0.nupkg.sha512",
+        "system.security.permissions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Principal.Windows/4.7.0": {
+      "sha512": "ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
+      "type": "package",
+      "path": "system.security.principal.windows/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.xml",
+        "lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.xml",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.dll",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/System.Security.Principal.Windows.dll",
+        "ref/netstandard1.3/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/es/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/fr/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/it/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ja/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ko/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ru/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.Principal.Windows.xml",
+        "ref/netstandard2.0/System.Security.Principal.Windows.dll",
+        "ref/netstandard2.0/System.Security.Principal.Windows.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.principal.windows.4.7.0.nupkg.sha512",
+        "system.security.principal.windows.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "Rhetos >= 4.3.0",
+      "Rhetos.CommonConcepts >= 4.3.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ihalusek\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Concepts\\Bookstore.Concepts.csproj",
+      "projectName": "Bookstore.Concepts",
+      "projectPath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Concepts\\Bookstore.Concepts.csproj",
+      "packagesPath": "C:\\Users\\ihalusek\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Concepts\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\ihalusek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "dependencies": {
+          "Rhetos": {
+            "target": "Package",
+            "version": "[4.3.0, )"
+          },
+          "Rhetos.CommonConcepts": {
+            "target": "Package",
+            "version": "[4.3.0, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

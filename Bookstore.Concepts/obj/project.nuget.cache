@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "gTVj+GlrkeVnxmSUXU6TYyY2Q4xwu1yRIXQUN+SJUdzKOjtjQ4/rvew+PizY6N+dk52ARpimhK+uJPtRsQpgeQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Concepts\\Bookstore.Concepts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ihalusek\\.nuget\\packages\\autofac\\4.9.4\\autofac.4.9.4.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\autofac.wcf\\4.1.0\\autofac.wcf.4.1.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\entityframework\\6.1.3\\entityframework.6.1.3.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\microsoft.csharp\\4.4.1\\microsoft.csharp.4.4.1.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\microsoft.web.xdt\\2.1.1\\microsoft.web.xdt.2.1.1.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\nlog\\4.6.7\\nlog.4.6.7.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\nuget.core\\2.14.0\\nuget.core.2.14.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\oracle.manageddataaccess\\12.1.24160719\\oracle.manageddataaccess.12.1.24160719.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\rhetos\\4.3.0\\rhetos.4.3.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\rhetos.commonconcepts\\4.3.0\\rhetos.commonconcepts.4.3.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.commandline\\2.0.0-beta1.20071.2\\system.commandline.2.0.0-beta1.20071.2.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.componentmodel.composition\\4.7.0\\system.componentmodel.composition.4.7.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.data.sqlclient\\4.8.1\\system.data.sqlclient.4.8.1.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
+    "C:\\Users\\ihalusek\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -8,6 +8,10 @@
         Reference Author Bookstore.Person;
         DateTime InStoreFrom { CreationTime; }
 
+        MonitoredRecords;
+
+        PhoneNumber MobilePhone;
+
         DateTime AuthorModified {ModificationTimeOf Bookstore.Book.Author;}
 
         ItemFilter LongBooks 'book => book.NumberOfPages >= 500';
@@ -51,6 +55,25 @@
 
 
         Logging { AllProperties; }
+    }
+
+    Entity Review
+    {
+        Reference Book { Required; }
+        Integer Score { Required; MinValue 1; MaxValue 5; }
+        LongString Text;
+
+        SaveMethod
+        {
+            Initialization DefaultTextFromScore
+            '
+                foreach (var item in insertedNew)
+                    if (string.IsNullOrEmpty(item.Text) && item.Score != null)
+                        item.Text = item.Score.Value >= 3
+                            ? "I like it"
+                            : "I don''t like it";
+            ';
+        }
     }
 
     SqlView BooksWithAuthors <SQL\BooksWithAuthors2.sql>;

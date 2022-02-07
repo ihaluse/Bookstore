@@ -10,7 +10,22 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "d1ba7447-69d1-441c-8f7a-0aa6aecf73ee": {
+      "ProjectGuid": "d1ba7447-69d1-441c-8f7a-0aa6aecf73ee",
+      "DisplayName": "Bookstore.Concepts",
+      "ColorIndex": 1
+    },
+    "8e2d787c-c517-49e6-8de5-5178c46d27b7": {
+      "ProjectGuid": "8e2d787c-c517-49e6-8de5-5178c46d27b7",
+      "DisplayName": "Bookstore.Concepts",
+      "ColorIndex": 2
+    },
+    "7a225ae7-c97a-4167-a2f7-1a034f9f2af8": {
+      "ProjectGuid": "7a225ae7-c97a-4167-a2f7-1a034f9f2af8",
+      "DisplayName": "Bookstore.Concepts",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 4
 }

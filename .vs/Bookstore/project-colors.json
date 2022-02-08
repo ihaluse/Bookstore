@@ -25,7 +25,17 @@
       "ProjectGuid": "7a225ae7-c97a-4167-a2f7-1a034f9f2af8",
       "DisplayName": "Bookstore.Concepts",
       "ColorIndex": 3
+    },
+    "0471e3df-e23d-4dd7-8b23-3127d18e371f": {
+      "ProjectGuid": "0471e3df-e23d-4dd7-8b23-3127d18e371f",
+      "DisplayName": "Bookstore.RowPermissions",
+      "ColorIndex": 4
+    },
+    "c3f3c40f-81d4-4af3-bd20-545d541926d9": {
+      "ProjectGuid": "c3f3c40f-81d4-4af3-bd20-545d541926d9",
+      "DisplayName": "Bookstore.RowPermissions",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 6
 }

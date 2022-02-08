@@ -9,17 +9,17 @@
         DateTime InStoreFrom { CreationTime; }
 
         Reference AssignedTo Bookstore.Employee;
-
-        AllowRead EveryoneCanRead 'context =>
+        RowPermissions{
+            AllowRead EveryoneCanRead 'context =>
             {return book => true;}
         ';
 
-        AllowWrite OwnerCanWrite 'context =>
-            {return book => book.AssignedTo.UserName == context.UserInfo.UserName;}
-        ';
+        // AllowWrite OwnerCanWrite 'context =>
+        //     {return book => book.AssignedTo.UserName == context.UserInfo.UserName;}
+        // ';
         
-
-
+        }
+        
 
         MonitoredRecords;
 

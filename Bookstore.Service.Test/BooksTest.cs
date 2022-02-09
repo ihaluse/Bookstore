@@ -68,7 +68,7 @@ namespace Bookstore.Service.Test
             {
                 var repository = scope.Resolve<Common.DomRepository>();
 
-                var books = new[] //moze insert? ili nema razlike?
+                var books = new[]
                 {
                     CreateNewBook("spirit"),
                     CreateNewBook("opportunity"),
@@ -115,17 +115,23 @@ namespace Bookstore.Service.Test
                 var newAuthor3 = new Bookstore_Person { Name = "Author3" };
                 repository.Bookstore.Person.Insert(newAuthor, newAuthor2, newAuthor3);
 
+                var bookToRemove = new Bookstore_Book { Title = Guid.NewGuid().ToString(), AuthorID = newAuthor.ID };
                 repository.Bookstore.Book.Insert(
                     new Bookstore_Book { Title = Guid.NewGuid().ToString(), AuthorID = newAuthor.ID },
                     new Bookstore_Book { Title = Guid.NewGuid().ToString(), AuthorID = newAuthor2.ID },
-                    new Bookstore_Book { Title = Guid.NewGuid().ToString(), AuthorID = newAuthor.ID}
+                    bookToRemove
                 );
+                var totalBooksByAuthorQuery = repository.Bookstore.TotalBooksByAuthor.Query();
 
-                var booksByFirstAuthor = repository.Bookstore.TotalBooksByAuthor.Query().Where(n => n.ID == newAuthor.ID).Select(n => n.NumberOfBooks).FirstOrDefault();
-                var booksByThirdAuthor = repository.Bookstore.TotalBooksByAuthor.Query().Where(n => n.ID == newAuthor3.ID).Select(n => n.NumberOfBooks).FirstOrDefault();
+                var booksByFirstAuthor = totalBooksByAuthorQuery.Where(n => n.ID == newAuthor.ID).Select(n => n.NumberOfBooks).FirstOrDefault();
+                var booksByThirdAuthor = totalBooksByAuthorQuery.Where(n => n.ID == newAuthor3.ID).Select(n => n.NumberOfBooks).FirstOrDefault();
 
                 Assert.AreEqual(2, booksByFirstAuthor);
                 Assert.AreEqual(0, booksByThirdAuthor);
+
+                repository.Bookstore.Book.Delete(bookToRemove);
+                booksByFirstAuthor = totalBooksByAuthorQuery.Where(n => n.ID == newAuthor.ID).Select(n => n.NumberOfBooks).FirstOrDefault();
+                Assert.AreEqual(1, booksByFirstAuthor);
             }
         }
 
@@ -133,8 +139,6 @@ namespace Bookstore.Service.Test
         public void ParallelCodeGeneration()
         {
             DeleteUnitTestBooks();
-
-            // Prepare test data:
 
             var books = new[]
             {
@@ -144,23 +148,17 @@ namespace Bookstore.Service.Test
                 new Book { Code = $"{UnitTestBookCodePrefix}ABC+", Title = Guid.NewGuid().ToString() }
             };
 
-            // Insert in parallel:
-
-            for (int retry = 0; retry < 3; retry++) // Running the test multiple times to avoid false positive, since the results are nondeterministic.
+            for (int retry = 0; retry < 3; retry++)
             {
                 Parallel.ForEach(books, book =>
                 {
-                    // Each scope represent one web request of the main application, executed in its own separate transaction.
-                    // The main application should support parallel web requests.
                     using (var scope = TestScope.Create())
                     {
                         var repository = scope.Resolve<Common.DomRepository>();
                         repository.Bookstore.Book.Insert(book);
-                        scope.CommitAndClose(); // Changes are committed to database, to make the test with parallel transactions more realistic.
+                        scope.CommitAndClose();
                     }
                 });
-
-                // Review the inserted data:
 
                 using (var scope = TestScope.Create())
                 {

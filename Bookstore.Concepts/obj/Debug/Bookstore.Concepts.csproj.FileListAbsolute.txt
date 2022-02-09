@@ -91,4 +91,3 @@ C:\Users\ihalusek\source\repos\Bookstore\Bookstore.Concepts\obj\Debug\Bookstore.
 C:\Users\ihalusek\source\repos\Bookstore\Bookstore.Concepts\obj\Debug\Bookstore.Concepts.csproj.CopyComplete
 C:\Users\ihalusek\source\repos\Bookstore\Bookstore.Concepts\obj\Debug\Bookstore.Concepts.dll
 C:\Users\ihalusek\source\repos\Bookstore\Bookstore.Concepts\obj\Debug\Bookstore.Concepts.pdb
-C:\Users\ihalusek\source\repos\Bookstore\Bookstore.Concepts\obj\Debug\Bookstore.Concepts.csproj.AssemblyReference.cache

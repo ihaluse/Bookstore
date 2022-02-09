@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service.Test\\Bookstore.Service.Test.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Concepts\\Bookstore.Concepts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Concepts\\Bookstore.Concepts.csproj",
+        "projectName": "Bookstore.Concepts",
+        "projectPath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Concepts\\Bookstore.Concepts.csproj",
+        "packagesPath": "C:\\Users\\ihalusek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Concepts\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ihalusek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Rhetos": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Rhetos.CommonConcepts": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service.Test\\Bookstore.Service.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service.Test\\Bookstore.Service.Test.csproj",
+        "projectName": "Bookstore.Service.Test",
+        "projectPath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service.Test\\Bookstore.Service.Test.csproj",
+        "packagesPath": "C:\\Users\\ihalusek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ihalusek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service\\Bookstore.Service.csproj": {
+                "projectPath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service\\Bookstore.Service.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Rhetos": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Rhetos.CommonConcepts": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service\\Bookstore.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service\\Bookstore.Service.csproj",
+        "projectName": "Bookstore.Service",
+        "projectPath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service\\Bookstore.Service.csproj",
+        "packagesPath": "C:\\Users\\ihalusek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ihalusek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Concepts\\Bookstore.Concepts.csproj": {
+                "projectPath": "C:\\Users\\ihalusek\\source\\repos\\Bookstore\\Bookstore.Concepts\\Bookstore.Concepts.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Rhetos.CommonConcepts": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Rhetos.RestGenerator": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Rhetos.Wcf": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -70,6 +70,33 @@
         Logging { AllProperties; }
     }
 
+    SqlQueryable ComputeBookInfo
+        "
+            SELECT
+                b.ID,
+                NumberOfComments = COUNT(bc.ID)
+            FROM
+                Bookstore.Book b
+                LEFT JOIN Bookstore.Comment bc ON bc.BookID = b.ID
+            GROUP BY
+                b.ID
+        "
+    {
+        Extends Bookstore.Book;
+        Integer NumberOfComments;
+
+        ChangesOnLinkedItems Bookstore.Comment.Book;
+    }
+
+    Entity BookInfo_Computed
+    {
+        ComputedFrom Bookstore.ComputeBookInfo
+        {
+            AllProperties;
+            KeepSynchronized;
+        }
+    }
+
     Entity Review
     {
         Reference Book { Required; }
@@ -250,16 +277,27 @@
         Logging;
     }
 
+//  "
+//             SELECT
+//                 ID, 
+//                 NumberOfBooks = COUNT(ID)
+//             FROM
+//                 Bookstore.BooksWithAuthors
+//             GROUP BY
+//                 ID
+//         "
     SqlQueryable TotalBooksByAuthor
-        "
-            SELECT
-                ID, 
-                NumberOfBooks = COUNT(ID)
-            FROM
-                Bookstore.BooksWithAuthors
-            GROUP BY
-                ID
-        "
+            "
+                SELECT 
+                    ID = author.ID,
+		            NumberOfBooks = Count(bwa.Author)
+                FROM 
+                    Bookstore.Person author
+                left join 
+                    Bookstore.BooksWithAuthors BWA on author.Name = bwa.Author
+                Group by 
+                    author.ID
+                "
     {
         Extends Bookstore.Person;
         Integer NumberOfBooks;
@@ -271,17 +309,17 @@
         Reference Book {Detail;}
         LongString Text;
 
-        RowPermissions{
-            AllowRead EveryoneCanRead 'context =>
-                {return comment => true;}
-            ';
+        // RowPermissions{
+        //     AllowRead EveryoneCanRead 'context =>
+        //         {return comment => true;}
+        //     ';
 
-            AllowWrite OwnerCanWrite 'context =>
-                {return comment => comment.Book.AssignedTo.UserName == context.UserInfo.UserName;}
-            ';
+        //     //AllowWrite OwnerCanWrite 'context =>
+        //         //{return comment => comment.Book.AssignedTo.UserName == context.UserInfo.UserName;}
+        //     //';
 
-            //InheritFrom Bookstore.Comment.Book;
-        }
+        //     //InheritFrom Bookstore.Comment.Book;
+        // }
         
         Deactivatable;
     }

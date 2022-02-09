@@ -1,7 +1,6 @@
 SELECT 
-	author.ID ID,
-	book.Title Title, 
-	author.name Author
+	book.Title,
+	author.name
 FROM 
   [Test].[Bookstore].[Book] book
   left join Test.Bookstore.Person author on author.ID = book.AuthorID
